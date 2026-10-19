@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Este script controla os botões do menu: abrir telas e escolher quantos jogadores.
+// Ele não cria tabuleiros; apenas guarda a escolha e abre a cena chamada Game.
 public class MainMenu : MonoBehaviour
 {
     [Header("Painéis do Menu")]
@@ -28,10 +30,12 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    // Método ao clicar em "1 Jogador"
+    // Método ligado ao botão "1 Jogador" pelo Inspector do Unity.
     public void IniciarUmJogador()
     {
-        // Salva a preferência (1 jogador) para ser lida na cena do jogo
+        Time.timeScale = 1f; // Se voltamos de um Game Over, devolve o tempo à velocidade normal.
+        // PlayerPrefs guarda um pequeno dado para a próxima cena conseguir ler a escolha.
+        // O número 1 identifica o modo solo.
         PlayerPrefs.SetInt("GameMode", 1);
         PlayerPrefs.Save();
 
@@ -39,10 +43,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    // Método ao clicar em "2 Jogadores"
+    // Método ligado ao botão "2 Jogadores". O número 2 é entendido por GridManager.
     public void IniciarDoisJogadores()
     {
-        // Salva a preferência (2 jogadores) para ser lida na cena do jogo
+        Time.timeScale = 1f;
+        // Guarda o modo 2 (versus). GridManager lê esse valor quando a cena Game começa.
         PlayerPrefs.SetInt("GameMode", 2);
         PlayerPrefs.Save();
 
@@ -50,6 +55,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    // Os métodos abaixo apenas mostram ou escondem painéis de menu.
     public void ComoJogar()
     {
         if (HowToPlayPanel != null)
@@ -68,6 +74,7 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    // Fecha o jogo construído. No Editor, também para o modo Play para facilitar testes.
     public void Sair()
     {
         Application.Quit();

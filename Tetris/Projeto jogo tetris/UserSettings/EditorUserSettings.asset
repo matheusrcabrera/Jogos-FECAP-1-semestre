@@ -3,7 +3,7 @@
 --- !u!162 &1
 EditorUserSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 5
+  serializedVersion: 4
   m_ConfigSettings:
     QuickInstaller_com.unity.purchasing_installRecorded:
       value: 2550581500
@@ -15,10 +15,16 @@ EditorUserSettings:
       value: 2550581500
       flags: 0
     RecentlyUsedSceneGuid-0:
-      value: 5a08575f5207595a0f5d59741173094444164f7d7d2a23317c7a4465bbe1646d
+      value: 0553560053530d5a0b0a0a2742205a44414e1a72752b75327b2c1f63b5b7306b
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 0553560053530d5a0b0a0a2742205a44414e1a72752b75327b2c1f63b5b7306b
+      value: 01090c5050025a5a0e575b76437608444f4e1b282a2d703675704961bab5636b
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 000707515504585f540b547344255b44414f4a287d7870627a2b4a64b0b86339
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 55555256075758095b57592646250e44424f4d29757c2761747c1f30e4e3673c
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
@@ -28,7 +34,7 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
-  m_DesiredImportWorkerCount: 4
+  m_DesiredImportWorkerCount: 2
   m_StandbyImportWorkerCount: 2
   m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1
@@ -40,4 +46,3 @@ EditorUserSettings:
   m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
   m_CompressAssetsOnImport: 1
-  m_VCAutoRevertUnchangedFiles: 0
